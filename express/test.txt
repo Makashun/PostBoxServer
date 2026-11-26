@@ -1,0 +1,66 @@
+GET Method
+
+Retrieve all records
+http://localhost:8888/
+
+Retrieve a records by District
+http://localhost:8888/district/{districtName)
+eg: Central, Southern, North,灣仔
+Optional query:
+http://localhost:8888/district/Central
+http://localhost:8888/district/Central?day=weekday&after=09:00
+http://localhost:8888/district/Central?day=weekday&before=13:00
+http://localhost:8888/district/Central?day=saturday&after=09:00&before=13:00
+
+Retrieve a records by Region
+http://localhost:8888/region/{regionName}
+eg: Kowloon, HONG KONG, 九龍, 港島
+Optional query:
+http://localhost:8888/region/KOWLOON
+http://localhost:8888/region/KOWLOON?day=weekday&after=09:00
+http://localhost:8888/region/KOWLOON?day=weekday&before=13:00
+http://localhost:8888/region/KOWLOON?day=saturday&after=09:00&before=13:00
+
+Retrieve a records by Location
+http://localhost:8888/location/{locationName}
+eg:Chatham Road, Ping Shek Estate, 锦田公路
+Optional query:
+http://localhost:8888/location/Chatham
+http://localhost:8888/location/Chatham?day=weekday&after=09:00
+http://localhost:8888/location/Chatham?day=weekday&before=13:00
+http://localhost:8888/location/Chatham?day=saturday&after=09:00&before=13:00
+
+Retrieve a record by ID
+http://localhost:8888/id/{id}
+
+DELETE Method
+Delete a record by ID
+http://localhost:8888/{id}
+
+POST Method
+Create a new Record
+http://localhost:8888/
+
+
+PUT Method
+Update a record by ID
+http://localhost:8888/{id}
+
+
+Create/Update body example:
+{
+  "districtEN": "Central and Western",
+  "districtTC": "中西區",
+  "districtSC": "中西区",
+  "locationEN": "Central Building, Pedder Street",
+  "locationTC": "畢打街中建大廈",
+  "locationSC": "毕打街中建大厦",
+  "regionEN": "HONG KONG",
+  "regionTC": "港島區",
+  "regionSC": "港岛区",
+  "boxNo": "024B",
+  "latitude": "22.28124",
+  "longitude": "114.15711",
+  "weekdayCollectionTime": "15:00",
+  "saturdayCollectionTime": "15:00"
+}
